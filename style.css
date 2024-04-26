@@ -1,36 +1,304 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300");
-html,
-body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-}
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(to right bottom, #873572, black);
-}
-a {
-  display: inline-block;
-  color: lightgrey;
-  font-size: 16px;
-  font-family: "Roboto", sans-serif;
-  white-space: nowrap;
-  padding: 12px;
-  border: 1px solid white;
-  border-radius: 30px;
-  text-decoration: none;
-  transition: all 0.15s ease-in-out;
+
+body{
+    font-family: 'Inter', sans-serif;
 }
 
-a:hover {
-  background: rgba(0, 0, 0, 0.23);
-  color: white;
-  transform: scale(1.03);
-  text-decoration: none;
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    box-sizing: border-box;
 }
-a:active {
-  transform: scale(0.98);
+
+
+.mainImage{
+    width: 80%;
+    height:75vh;
+    margin: auto;
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    align-items: center;
+    margin-block-end: 1rem;
+    
+  }
+  
+  .mainImage img{
+    max-height: 100%;
+    width: 80%;
+    height: 100%;
+    border-radius: 6px;
+    
+  }
+  .imageList{
+   
+    width: 60%;
+    height:13vh;
+    margin: auto;
+    display: flex ;
+    justify-content: space-between;
+  }
+  .imageList img{
+    width: 20%;
+    height: 100%;
+    border-radius: 6px;
+  }
+
+.leftDiv,
+.rightDiv {
+    max-height: 100%;
+    /* background-color: lightblue; */
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+@media screen and (min-width: 1025px) {
+    .container {
+        flex-direction: row;
+    }
+    .leftDiv,
+    .rightDiv {
+        flex: 1;
+        margin-right: 10px;
+    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .leftDiv,
+    .rightDiv {
+        width: 100%;
+    }
+}
+.leftChild{
+    margin-left: 1rem;
+    margin-right: 5rem;
+}
+
+.mermeto{
+    margin-block-start: 0;
+    margin-block-end: 0.4rem;
+    font-size: 14px;
+    color:#B9BBBF;
+}
+.productName{
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.pricesection{
+    display: flex;
+    gap: 1rem;
+  }
+
+  .discountprice{
+    margin-block-start: 0; 
+    color: #3A4980;
+}
+.offer{
+    margin-block-start: .4rem; 
+    color: rgba(255, 0, 0, 0.5);
+}
+
+.originalPrice{
+    margin-block-start: 0;
+    color:rgba(0, 0, 0, 0.5);   
+}
+
+.choosAColor{
+    margin-block-start: 0;
+    font-size: 14px;
+    color:#B9BBBF; 
+}
+
+.colorOption{
+    width: 50%;
+    height:10vh;
+    display: flex;
+    justify-content: space-between;
+  } 
+  
+  .colorBox{
+    width:18%;
+    height: 76%;
+    margin:2px  
+  }
+  .orangeboxcheck{
+    width:80%;
+    height:80%;
+    margin:2px ;
+    background-color: #ECDECC;
+  }
+  .greenboxcheck{
+    width:80%;
+    height:80%;
+    margin:2px ;
+    background-color:#BBD278;
+  }
+  .blueboxcheck{
+    width:80%;
+    height:80%;
+    margin:2px ;
+    background-color: #BBC1F8;
+  }
+  .pinkboxcheck{
+    width:80%;
+    height:80%;
+    margin:2px ;
+    background-color:#FFD3F8;
+  }
+
+
+  .orange{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    border: 2px solid #ECDECC;
+    background-color:white; 
+  }
+  .green{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    border: 2px solid#BBD278;
+    background-color: white;
+  }
+  .blue{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    border: 2px solid #BBC1F8;
+    background-color: white;
+  }
+  .pink{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    border: 2px solid  #FFD3F8;
+    background-color:white;
+  } 
+  
+
+  
+  .sizeSection{
+    width: 100%;
+    display: flex;
+    gap:0.5rem;
+    margin-block-end: 1.2rem;
+  }
+  .chooseSize{
+    margin-block-start: 0;
+    font-size: 14px;
+    color:#B9BBBF; 
+}
+  
+  .sizeBox{
+    padding: 0px 0.5rem ;
+    background-color: #F3F3F3;
+    border-radius: 8px;
+    display: flex;
+    height: 1.5rem;
+    justify-content: center; 
+    align-items: center; 
+
+  }
+  .sizeIdentifier{
+    font-size: 11px;
+    color:#726C6C; 
+  }
+ .cartAndCount{
+    display: flex;
+    gap: 2rem;
+ }
+  .counter{
+    background-color: #F3F3F3;
+    display: flex;
+    justify-content: space-between;
+    gap: 2.6rem;
+    height: 2.2rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 29.5px;
+  }
+  .minus{
+    margin-left: 1rem;
+    cursor: pointer
+  }
+  .inc{
+    margin-right: 1rem;
+    cursor: pointer
+  }
+
+
+  
+  .cartButton{
+    background-color: #3A4980;
+    display: flex;
+    gap:1rem;
+    height: 2.2rem;
+    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    border-radius: 29.5px;
+  }
+  .addToCart{
+    margin-left: 4rem;
+    margin-right: 4rem;
+    color:white;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer
+ 
+  }
+
+  .description{
+    font-size: 14px;
+    color:#B9BBBF;
+  }
+  
+  .notification {
+    display: none;
+    background-color: #E7F8B7;
+    border-color: #c3e6cb;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-size: 11px;
+    height:2rem;
+    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+}
+.messageNotification{
+    padding-top: .5rem;
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+input[type="radio"] {
+    background-color: lightblue;
+    border-color: #3A4980; 
+  }
+  
+  input[type="radio"]:checked {
+    background-color: #3A4980; 
+  }
+
+  hr {
+    border-color: #E4E4E4; /* Change the color to red */
 }
 
